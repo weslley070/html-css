@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /*
+        pseudo classe define estado do elemento html
+        :: pseudo elemento
+        : pseudo class
+        > clidren
+        */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }a{
+            color: rgb(4, 255, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }a:visited{
+            color: rgb(255, 0, 0);
+        }a:hover{
+            text-decoration: underline;
+            color: blue;
+        }a:active{
+            color: aqua;
+        }a::after{
+            content: '⇐';
+        }a::before{
+            content: '⇒';
+        }.especial::before{
+            content:'➥' ;
+        }.especial::after{
+            content: none;
+        }.especial{
+            background-color: rgb(133, 133, 237);
+            border-radius: 5px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Persolnalizando links:</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io"
+            target="_blank" rel="external">Repositorio github</a></li>
+        <li><a class="especial" href="https://youtube.com/cursoemvideo/" rel="external" target="_blank">Canal curso em video</a></li>
+        <li><a href="https://www.cursoemvideo.com" rel="external" target="_blank">Site do curso em video</a></li>
+        <li><a href="https://www.msn.com/pt-br/entretenimento/famosos/rafa-justus-faz-cirurgia-pl%C3%A1stica-aos-14-anos-de-idade-aproveitei-para-fazer-uma-rinoplastia/ar-BB1i9vhj?ocid=msedgntp&pc=U531&cvid=9274e5a5dfdf434798bc5eccf4ba9ba7&ei=9" rel="external" target="_blank">menina feia</a></li>
+    </ul>
+</body>
+</html>

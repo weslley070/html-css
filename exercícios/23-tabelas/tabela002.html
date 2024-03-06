@@ -2,98 +2,305 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-        table,tr,td{
+        table{
             border: 1px solid black;
             border-collapse: collapse;
-            width: 400px;
-            padding: 10px 0px 10px 5px;
-        }
-        thead,tfoot{
-            background-color: gray;
-            color: white;
-        }
-        th{
+            width: 500px;
+            position: relative;
+        }td,th{
             border: 1px solid black;
             padding: 10px;
         }
-        .numero{
-            text-align: right;
+        thead > tr > th{
+            position: sticky;
+            left: -1px;
         }
-        
+        .num{
+            text-align: right;
+        }caption{
+            background-color: lightgray;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px 10px 0px 0px;
+        }thead,tfoot,th{
+            background-color: rgb(75, 72, 72);
+            color: white;
+        }tbody > tr:nth-child(odd){
+            background-color: white;
+            font-weight: bold;
+        }tbody > tr:nth-child(even){
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
-    <h1>Tabelas grandes</h1>
-    <!--
-        anotomia de uma tabela grande:
-        THEAD:
-            TR,TD,TH
-        TBODY:
-            TR,TD,TH
-        TFOOT:
-            TR,TD,TH
-        TH: cabeçalho
-
-    -->
+    <h1>Caption, escopo e tabelas grandes </h1>
     <table>
+        <caption>
+            População por estado
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
-                <td class="numero">45 919 049</td>
+                <td class="num">44 411 238	</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td>
-                <td class="numero">20 538 718</td>
+                <td>minas gerais</td>
+                <td class="num">20 538 718</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td>
-                <td class="numero">16 054 524</td>
+                <td>Rio de janeiro</td>
+                <td class="num">16 054 524	</td>
             </tr>
             <tr>
                 <td>Bahia</td>
-                <td class="numero">14 141 626</td>
+                <td class="num">14 141 626</td>
             </tr>
             <tr>
                 <td>Paraná</td>
-                <td class="numero">11 444 380</td>
+                <td class="num">11 444 380</td>
             </tr>
             <tr>
-                <td>Rio Grande do Sul</td>
-                <td class="numero">10 882 965	</td>
+                <td>São Paulo</td>
+                <td class="num">44 411 238	</td>
             </tr>
             <tr>
-                <td>Pernambuco</td>
-                <td class="numero">9 058 931</td>
+                <td>minas gerais</td>
+                <td class="num">20 538 718</td>
             </tr>
             <tr>
-                <td>Ceará</td>
-                <td class="numero">8 794 957</td>
+                <td>Rio de janeiro</td>
+                <td class="num">16 054 524	</td>
             </tr>
             <tr>
-                <td>Pará</td>
-                <td class="numero">8 121 025	</td>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
             </tr>
             <tr>
-                <td>Santa Catarina</td>
-                <td class="numero">7 610 361	</td>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">44 411 238	</td>
+            </tr>
+            <tr>
+                <td>minas gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro</td>
+                <td class="num">16 054 524	</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">44 411 238	</td>
+            </tr>
+            <tr>
+                <td>minas gerais</td>
+                <td class="num">20 538 718</td>
+            </tr>
+            <tr>
+                <td>Rio de janeiro</td>
+                <td class="num">16 054 524	</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 141 626</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 444 380</td>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num">44 411 238	</td>
+                </tr>
+                <tr>
+                    <td>minas gerais</td>
+                    <td class="num">20 538 718</td>
+                </tr>
+                <tr>
+                    <td>Rio de janeiro</td>
+                    <td class="num">16 054 524	</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num">14 141 626</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num">11 444 380</td>
+                </tr>
             </tr>
         </tbody>
         <tfoot>
-            <th>População total</th>
-            <td class="numero"><strong>150 000 000</strong></td>
+            <tr>
+                <th>Populção total</th>
+                <td class="num">200 000 000</td>
+            </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iure ut optio cupiditate similique ad minima illo fuga perspiciatis sunt ipsam nulla ipsum placeat et voluptatum molestias, repellat corporis provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi necessitatibus quasi modi eius repellendus enim atque magni exercitationem porro voluptatibus delectus quam dolorum corrupti ut, neque vero. Omnis, odio qui! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sapiente excepturi cupiditate harum quam, voluptas laudantium, voluptatibus consectetur odio dolore debitis sequi? Obcaecati repellendus vero voluptas quidem sapiente, adipisci error! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis repellendus nihil dolores temporibus autem eius dicta eveniet fugit. Est assumenda labore beatae, sequi nobis ipsum! Pariatur soluta quae dignissimos expedita? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aut praesentium molestias animi. Unde, exercitationem placeat ab pariatur nisi itaque, officiis voluptas eius, vel minima iure aspernatur facere accusamus similique? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam ex ratione quos saepe quia cupiditate <br>perspiciatis voluptatibus ipsum eaque, voluptatem nam expedita vitae? Dolorum nam perspiciatis soluta veniam molestiae voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eius enim itaque et cupiditate! Dolores eligendi magni fugiat dolorum. Nam non dolores adipisci aliquid ipsam optio magni autem, est temporibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, rem doloribus laboriosam minima  <br>accusantium quidem aliquam id est atque saepe magnam quibusdam? Expedita sunt, alias minima ipsum rem minus tempore? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem iste atque ad excepturi enim, fugiat quam illo quasi dolorum laborum at consectetur veniam totam, perferendis et! Fugiat beatae aperiam necessitatibus! Lorem ipsum dolor sit amet consectetur, adipisicing elit. In molestias explicabo necessitatibus <br> voluptatibus, fuga recusandae inventore praesentium sunt nesciunt? Corrupti molestias, laboriosam dolorem magnam placeat ullam officia nam blanditiis eos! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ullam consectetur odit a natus pariatur voluptatum atque repellat voluptatem modi, aliquid reiciendis quia expedita. Natus veniam sint alias temporibus accusamus?l Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quasi eos fugiat, saepe, expedita corporis assumenda deserunt vel vero laudantium placeat! Aspernatur fuga est in ipsum earum quaerat neque nam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis explicabo, culpa voluptas saepe animi iusto. Voluptates excepturi animi voluptatibus, nihil sunt soluta tempore rerum laboriosam consequatur rem distinctio omnis obcaecati.</p>
 </body>
 </html>

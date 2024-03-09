@@ -5,85 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
         table{
             border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
             width: 500px;
         }th,td{
             border: 1px solid black;
-            padding: 8px;
+            padding: 5px;
         }caption{
             font-size: 1.2em;
-            font-weight: bold;
-        }.cnome{
             background-color: lightgray;
-        }#rotate{
-            width: 150px;
-            height: 70px;
-            background-color: aquamarine;
-            transform: rotate(-45deg);
+            border-radius: 10px 10px 0px 0px;
+            font-weight: bolder;
+            padding: 10px;
+            text-transform: uppercase;
+        }.des{
+            background-color: antiquewhite;
+        }.des2{
+            background-color: aqua;
+        }#l{
+            background-color: bisque;
         }
     </style>
 </head>
 <body>
-    <h1>Exercicio de tabela</h1>
-    
-    <div id="rotate">
-
-    </div>
-
     <table>
         <colgroup>
-            <col class="cnome" span="2">
-            <col>
-            <col>
-            <col>
+            <col class="des">
+            <col class="des2" span="2">
+            <col id="des3">
         </colgroup>
-        <caption>
-            Cadastro
-        </caption>
+        <caption>Cadastro</caption>
         <tr>
             <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
             <th scope="col">Idade</th>
             <th scope="col">Profissão</th>
         </tr>
         <tr>
-            <td>Ana Maria</td>
-            <td>Feminino</td>
-            <td>35</td>
-            <td>Advogada</td>
-        </tr>
-        <tr>
-            <td>Maria fernada</td>
-            <td>Feminino</td>
-            <td>26</td>
-            <td>Jornalista</td>
-        </tr>
-        <tr>
             <td>João</td>
-            <td>Masculino</td>
-            <td>35</td>
-            <td>Advogado</td>
+            <td>M</td>
+            <td>25</td>
+            <td>Vendedor</td>
         </tr>
         <tr>
             <td>Pedro</td>
-            <td>Masculino</td>
-            <td>35</td>
-            <td>Comerciante</td>
+            <td>M</td>
+            <td>33</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>                
+            <td>22</td>
+            <td>Jornalista</td>
         </tr>
         <tr>
             <td>Weslley</td>
-            <td>Masculino</td>
-            <td>28</td>
-            <td>Empresario</td>
+            <td>M</td>
+            <td>20</td>
+            <td>Streamer</td>
         </tr>
         <tr>
-            <td>Glauber</td>
-            <td>Masculino</td>
-            <td>40</td>
-            <td>Personal</td>
+            <td>Laura</td>
+            <td>F</td>
+            <td>22</td>
+            <td>Professora</td>
         </tr>
     </table>
 </body>

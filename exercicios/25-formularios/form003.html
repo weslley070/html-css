@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        input[type="submit"],input[type="reset"]{
+            text-transform:uppercase;
+        }form{
+            width: 270px;
+            border: 1px solid black;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
     <h1>Teste de formulario</h1>
     <form action="cada.php" method="get" autocomplete="on">
         <p> 
-        <label for="inome">Nome</label>
-        <input type="text" name="nome" id="inome" placeholder="Nome completo" autocomplete="username">
-        <input type="submit" value="enviar">
+        <label for="inome">Nome:</label>
+        <input type="text" name="nome" id="inome" placeholder="Nome completo" required autocomplete="username">
+        </p>
+        <p>
+            <label for="inota">Nota:</label>
+            <input type="number" name="nota" id="inota" required placeholder="Nota do aluno" step="0.1" value="6" min="0" max="10"> 
+        </p>
+        <p>
+            <label for="ibimestre">Bimestre:</label>
+            <input type="month" name="bimestre" required id="ibimestre" value="2024-03">
+        </p>
+        <p>
+            <label for="dia">Dia da prova:</label>
+            <input type="date" name="dia" required id="dia">
+        </p>
+        <p>
+            <label for="ihora">Horário da prova:</label>
+            <input type="time" name="hora" required id="ihora">
+        </p>
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
         </p>
     </form>
 </body>

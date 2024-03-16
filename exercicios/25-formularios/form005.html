@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de formul]ario</h1>
+    <form action=".php">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="ndf" checked value="N">
+            <label for="ndf">Não definido</label>
+
+            <input type="radio" name="sexo" id="imas" value="M">
+            <label for="imas">Masculino</label>
+
+            <input type="radio" name="sexo" id="ifem" value="F">
+            <label for="ifem">Feminino</label>
+            
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="fut" id="ifut">
+            <label for="ifut"> Futebol</label> <br>
+            
+            <input type="checkbox" name="basq" id="ibasq">
+            <label for="ibasq"> Basquete </label><br>
+
+            <input type="checkbox" name="tenis" id="itenis">
+            <label for="itenis"> Tênis </label><br>
+
+            <input type="checkbox" name="nata" id="inata">
+            <label for="inata"> Natação</label>
+            
+        </fieldset>
+        <p>
+            <input type="submit" value="envviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+</body>
+</html>

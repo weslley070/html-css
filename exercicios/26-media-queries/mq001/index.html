@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/tela.css" media="screen">
+    <link rel="stylesheet" href="estilos/impressora.css" media="print">
+</head>
+<body>
+    <header>
+        <h1>Noticias</h1>
+        <menu>
+            <ul>
+                <li>Politica</li>
+                <li>Tecnologia</li>
+                <li>Esportes</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Estou aprendendo media queries</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut nulla maiores? Facere cum excepturi eius dolorum vel iure! Est praesentium natus quos sint alias quisquam voluptate dolore facere! Adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem assumenda, error eum optio itaque necessitatibus officia magni ut pariatur nisi soluta, id sunt nam eos maiores consectetur quas quidem illum!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur similique consectetur porro molestias fugiat dolores? Aut dolores voluptates magnam debitis nesciunt. Ad fugiat error a harum cum. Pariatur, suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit hic deleniti, cum odit autem asperiores, officia impedit pariatur, sunt fuga ullam quis alias maxime explicabo dolor necessitatibus illo quo voluptates.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quibusdam, velit, modi, accusamus adipisci ipsam incidunt totam explicabo cupiditate nesciunt odit qui repellat! Suscipit pariatur voluptas at dolorum delectus quia! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sed ut voluptatibus quos, excepturi voluptate commodi, nobis et autem ipsum rem possimus veritatis neque enim provident! Officiis praesentium aspernatur fugit.</p>
+            <p id="impress">Esse artigo foi impresso no dia </p>
+        </article>
+    </main>
+    <script>
+        let dia = new Date().getDate()
+        let mes = new Date().getMonth()
+        let ano = new Date().getFullYear()
+        let impress = document.getElementById('impress')
+
+        let hora = new Date().getHours()
+        let min = new Date().getMinutes()
+        impress.innerHTML += `${dia}/0${mes}/${ano} às ${hora}:${min}`
+
+        
+    </script>
+</body>
+</html>

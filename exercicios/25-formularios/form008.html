@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <p>
+            <label for="in1">Digite um numero:</label>
+            <input type="number" name="n1" id="in1" min="0" required oninput="out.innerHTML = Number(n1.value) + Number(n2.value)" ><br>
+        </p>
+
+        <p>
+            <label for="in2">Digite outro numero:</label>
+            <input type="number" name="n2" id="in2" min="0" required oninput="out.innerHTML = Number(n1.value) + Number(n2.value)" >
+        </p>
+        <p>
+            <label for="isoma">Soma:</label>
+            <output id="out" name="out"></output>
+        </p>
+
+        <input type="submit" value="enviar">
+        <input type="reset" value="limpar">
+        <input type="button" value="somar" onclick="somar()">
+    </form>
+    <script>
+        function somar(){
+          let n1 = document.getElementById('in1')
+            let n2 = document.getElementById('in2')
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            n3 = n1 + n2
+            let out = document.getElementById('out')
+            out.innerHTML = n3
+        }
+            
+    </script>
+</body>
+</html>

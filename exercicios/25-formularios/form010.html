@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="iano">Data de nascimento:</label>
+            <input type="number" name="ano" id="iano" min="1900" max="2024"  oninput="calidade()">
+        </p>
+
+        <p>
+            <label for="idade">idade:</label>
+            <output id="idade"></output>
+        </p>
+
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
+    <script>
+        function calidade(){
+            let atual = new Date()
+            atual = atual.getFullYear()
+            let out = document.getElementById('idade')
+            let ano = Number(document.getElementById('iano').value)
+            atual = atual - ano
+            out.innerHTML = atual
+        }
+    </script>
+</body>
+</html>

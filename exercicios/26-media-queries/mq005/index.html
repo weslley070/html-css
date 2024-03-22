@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu responsivo</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all">
+    <link rel="stylesheet" href="estilos/tablet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="exibir()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h2>Teste de media Query</h2>
+        <article>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe autem delectus iusto aut eos fugit. Magni omnis tenetur voluptatem quas, maxime, voluptas alias consectetur ducimus debitis nobis ex rerum ad? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, maiores mollitia reiciendis molestiae ipsum eius sequi in facilis aspernatur sed eligendi, enim tenetur culpa. Placeat ipsam illum laboriosam consequuntur pariatur. 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit fugiat dicta culpa perspiciatis voluptates nostrum facere sit alias debitis, numquam odit, esse voluptatum similique, dolores dignissimos asperiores laborum! Aliquid! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium repudiandae quisquam necessitatibus dignissimos fugit aliquam voluptas, soluta doloremque laboriosam explicabo, amet fuga a eligendi corrupti quasi quae aliquid est! Aut?
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia tempora ducimus aut vero ullam maxime consequuntur minima reprehenderit iste. Magnam natus vero, modi nam officiis eaque cum dignissimos laborum dolorum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo vitae placeat harum atque molestias iure, asperiores odit recusandae praesentium quos repellat, est nemo dolorem beatae unde, architecto tempore incidunt deserunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aspernatur vero fuga qui maxime accusamus, corrupti dolorum ipsam cumque saepe dolores. Voluptatibus eos ducimus deleniti optio fugiat ab, sapiente laboriosam.
+            </p>
+        </article>
+    </main>
+    <script>
+        function exibir(){
+            if(menu.style.display == 'block'){
+                menu.style.display = 'none'
+            }else{
+                menu.style.display = 'block'
+            }
+        }
+    </script>
+</body>
+</html>

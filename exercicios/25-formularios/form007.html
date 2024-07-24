@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Exemplo de formulario</h1>
+    <h2>Select</h2>
     <form action="cadastro.php" method="post">
         <p>
         <label for="iestados">estados:</label>
@@ -46,8 +47,19 @@
                 </optgroup>
             </select>
         </p>
+        <p>
+            <H2>Select múltiplo:</H2>
+            <select name="frutas" id="frutas" multiple>
+                <option value="pera">Pera</option>
+                <option value="maca">Maçã</option>
+                <option value="mamao">Mamão</option>
+                <option value="kiwi">Kiwi</option>
+                <option value="melancia">Melância</option>
+            </select>
+        </p>
 
         <p>
+            <h2>Datalist:</h2>
             <label for="iprof">Profissão:</label>
             <input type="text" name="prof" id="iprof" list="lsprof">
             <datalist id="lsprof">
@@ -58,8 +70,12 @@
             </datalist>
         </p>
         <p>
+            <h2>Text area:</h2>
             <label for="imsg">Mensagem:</label><br>
             <textarea name="Mensagem" id="imsg" cols="30" rows="10" placeholder="digite uma mesnsagem">ola</textarea>
+        </p>
+        <p>
+            <input type="file" name="" id="">
         </p>
         <p>
             <input type="submit" value="enviar">
